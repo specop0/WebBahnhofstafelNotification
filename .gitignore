@@ -1,0 +1,7 @@
+curl/*
+target/*
+*.exe
+*.xpi
+*.txt
+manifest.mf
+nbactions.xml
