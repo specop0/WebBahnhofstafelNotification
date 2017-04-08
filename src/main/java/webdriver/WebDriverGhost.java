@@ -25,8 +25,8 @@ public class WebDriverGhost extends PhantomJSDriver implements IWebDriver {
      *
      * @return Created web driver.
      */
-    public static WebDriverGhost GetNewWebDriver() {
-        WebDriverGhost webDriver = null;
+    public static IWebDriver GetNewWebDriver() {
+        IWebDriver webDriver = null;
         try {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setJavascriptEnabled(true);

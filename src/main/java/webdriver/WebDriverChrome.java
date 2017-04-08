@@ -40,7 +40,7 @@ public class WebDriverChrome extends ChromeDriver implements IWebDriver {
      *
      * @return Created web driver.
      */
-    public static WebDriverChrome GetNewWebDriver() {
+    public static IWebDriver GetNewWebDriver() {
         return GetNewWebDriver(CHROME_BINARY_PATH, CHROME_DRIVER_PATH);
     }
 
@@ -50,7 +50,7 @@ public class WebDriverChrome extends ChromeDriver implements IWebDriver {
      * @param binaryPath Path of the chrome binary.
      * @return Created web driver.
      */
-    public static WebDriverChrome GetNewWebDriver(String binaryPath) {
+    public static IWebDriver GetNewWebDriver(String binaryPath) {
         return GetNewWebDriver(binaryPath, CHROME_DRIVER_PATH);
     }
 
@@ -61,8 +61,8 @@ public class WebDriverChrome extends ChromeDriver implements IWebDriver {
      * @param chromeDriverPath Path of the chrome driver.
      * @return Created web driver.
      */
-    public static WebDriverChrome GetNewWebDriver(String binaryPath, String chromeDriverPath) {
-        WebDriverChrome webDriver = null;
+    public static IWebDriver GetNewWebDriver(String binaryPath, String chromeDriverPath) {
+        IWebDriver webDriver = null;
         try {
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.setBinary(binaryPath);

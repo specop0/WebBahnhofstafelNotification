@@ -32,7 +32,7 @@ public class WebDriverFF extends FirefoxDriver implements IWebDriver {
      *
      * @return Created web driver.
      */
-    public static WebDriverFF GetNewWebDriver() {
+    public static IWebDriver GetNewWebDriver() {
         return GetNewWebDriver(FIREFOX_DRIVER_PATH);
     }
 
@@ -42,8 +42,8 @@ public class WebDriverFF extends FirefoxDriver implements IWebDriver {
      * @param driverPath Path of the geckodriver.
      * @return Created web driver.
      */
-    public static WebDriverFF GetNewWebDriver(String driverPath) {
-        WebDriverFF webDriver = null;
+    public static IWebDriver GetNewWebDriver(String driverPath) {
+        IWebDriver webDriver = null;
         try {
             System.setProperty("webdriver.gecko.driver", driverPath);
             webDriver = new WebDriverFF();
